@@ -1,0 +1,21 @@
+<p>get-weather-data works!</p>
+<button (click)="getWeatherData()"></button>
+<form [formGroup]="inputFormDefault" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    id="cityName"
+    class="defaultFormInput"
+    formControlName="cityName"
+    placeholder="City..."
+  >
+  <input
+  type="text"
+  id="countryCode"
+  class="defaultFormInput"
+  formControlName="countryCode"
+  placeholder="Country Code..."
+  >
+  <button type="submit" [disabled]="!inputFormDefault.valid">submit</button>
+</form>
+
+
